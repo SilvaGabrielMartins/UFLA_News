@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "715500494812",
+    "project_id": "uflanews-f1812",
+    "storage_bucket": "uflanews-f1812.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715500494812:android:745c4d9b7547af0e9c3919",
+        "android_client_info": {
+          "package_name": "com.example.ufla_news"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "715500494812-21646g764fqg52d2plsr9jq2uj1q8qvr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6IVOeYh0eC1dAHjF6Sdg941ZLL1BvNX4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "715500494812-21646g764fqg52d2plsr9jq2uj1q8qvr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
