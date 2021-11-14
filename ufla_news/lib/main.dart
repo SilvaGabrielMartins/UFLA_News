@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'UFLA News',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: const Color(0xEEEEEEEE),
       ),
       home: MyHomePage(),
     );

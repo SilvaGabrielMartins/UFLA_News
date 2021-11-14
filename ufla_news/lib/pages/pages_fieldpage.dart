@@ -41,40 +41,37 @@ class MyHomePage extends StatelessWidget {
                 itemBuilder: (BuildContext context, int i) {
                   var item = snapshot.data.documents[i].data;
                   print(item["Capa"]);
-                  return Card(
-                    elevation: 2,
-                    clipBehavior: Clip.antiAlias,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8)),
-                    color: Colors.blue[700],
-                    child: Center(
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 480,
-                            height: 200,
-                            child: Image.network(
-                              "${item['Capa']}",
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(18.0),
-                            child: Text(
-                              "${item['Titulo']}",
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                          Text(
-                            "${item['Autor']}",
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
-                      ),
-                    ),
-                  );
+                  return buildCard(item);
                 });
           }),
     );
+  }
+
+  Widget buildCard(var item) {
+    return Card(
+        elevation: 4,
+        clipBehavior: Clip.antiAlias,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        color: Colors.white,
+        child: Center(
+            child: Column(children: <Widget>[
+          Container(
+            width: 480,
+            height: 130,
+            child: Image.network(
+              "${item['Capa']}",
+              fit: BoxFit.cover,
+            ),
+          ),
+          Padding(
+              padding: EdgeInsets.all(10),
+              child: Column(children: <Widget>[
+                Text("${item['Titulo']}",
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 20)),
+                Text("${item['Autor']}", textAlign: TextAlign.center)
+              ]))
+        ])));
   }
 }
