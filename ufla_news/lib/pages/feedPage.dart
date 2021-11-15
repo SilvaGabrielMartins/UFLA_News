@@ -41,7 +41,7 @@ class FeedPage extends StatelessWidget {
                 itemCount: snapshot.data.documents.length,
                 itemBuilder: (BuildContext context, int i) {
                   var item = snapshot.data.documents[i].data;
-                  return NewsCard(item: item);
+                  return NewsCard(news: item);
                 });
           }),
     );
