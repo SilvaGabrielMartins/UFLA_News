@@ -1,3 +1,10 @@
+/*
+Aplicativo UFLA News desenvolvido utilizando Flutter como trabalho da disciplina GCC 144 - Desenvolvimento de aplicativos mobile
+Grupo: 
+Gabriel Martins Silva
+Lucas de Carvalho Felizardo 
+UFLA 2021
+*/
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
