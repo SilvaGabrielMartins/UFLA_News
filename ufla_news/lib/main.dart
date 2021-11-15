@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-import 'pages/pages_fieldpage.dart';
+import 'pages/feedPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: const Color(0xEEEEEEEE),
       ),
-      home: MyHomePage(),
+      home: FeedPage(),
     );
   }
 }

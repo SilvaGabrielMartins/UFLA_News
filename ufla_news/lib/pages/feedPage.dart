@@ -1,8 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:ufla_news/pages/pages_searchpage.dart';
+import 'package:ufla_news/pages/searchPage.dart';
+import '../components/newsCard.dart';
 
-class MyHomePage extends StatelessWidget {
+class FeedPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Coleção das notícias
@@ -40,38 +41,9 @@ class MyHomePage extends StatelessWidget {
                 itemCount: snapshot.data.documents.length,
                 itemBuilder: (BuildContext context, int i) {
                   var item = snapshot.data.documents[i].data;
-                  print(item["Capa"]);
-                  return buildCard(item);
+                  return NewsCard(item: item);
                 });
           }),
     );
-  }
-
-  Widget buildCard(var item) {
-    return Card(
-        elevation: 4,
-        clipBehavior: Clip.antiAlias,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-        color: Colors.white,
-        child: Center(
-            child: Column(children: <Widget>[
-          Container(
-            width: 480,
-            height: 130,
-            child: Image.network(
-              "${item['Capa']}",
-              fit: BoxFit.cover,
-            ),
-          ),
-          Padding(
-              padding: EdgeInsets.all(10),
-              child: Column(children: <Widget>[
-                Text("${item['Titulo']}",
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 20)),
-                Text("${item['Autor']}", textAlign: TextAlign.center)
-              ]))
-        ])));
   }
 }
