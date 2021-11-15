@@ -11,12 +11,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    // Recupera a coleção noticias do banco do Fire Store
-    Firestore.instance.collection('noticias').getDocuments().then((value) {
-      value.documents.forEach((elemento) {
-        print(elemento.data);
-      });
-    });
     return MaterialApp(
       title: 'UFLA News',
       theme: ThemeData(
